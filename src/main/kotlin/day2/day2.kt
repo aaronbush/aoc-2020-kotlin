@@ -22,13 +22,14 @@ fun part1(policies: List<Policy>) {
             it == policy.character
         } in policy.min..policy.max
     }
-    println(result)
+    println("part1 is $result")
 }
 
 fun part2(policies: List<Policy>) {
     val result = policies.count { policy ->
-        (policy.password[policy.min - 1] == policy.character) xor (policy.password[policy.max - 1] == policy.character)
+        (policy.password[policy.min - 1] == policy.character) xor
+                (policy.password[policy.max - 1] == policy.character)
     }
-    println(result)
+    println("part2 is $result")
 }
 

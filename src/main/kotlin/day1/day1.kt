@@ -8,6 +8,8 @@ fun main() {
     part2(data)
 }
 
+// TODO: try subtraction method
+// TODO: try sequences
 private fun part1(data: List<Int>) {
     val combined = data.flatMapIndexed { index, i -> data.drop(index).map { Pair(i, it) } }
     val result = combined.first { it.first + it.second == 2020 }
