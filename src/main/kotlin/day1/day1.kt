@@ -11,7 +11,8 @@ fun main() {
 // TODO: try subtraction method
 // TODO: try sequences
 private fun part1(data: List<Int>) {
-    val combined = data.flatMapIndexed { index, i -> data.drop(index).map { Pair(i, it) } }
+    val combined = data.flatMapIndexed { index, i -> data.drop(index + 1).map { Pair(i, it) } }
+    println(combined)
     val result = combined.first { it.first + it.second == 2020 }
     println("part1 is $result -> ${result.first * result.second}")
 }
