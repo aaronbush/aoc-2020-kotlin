@@ -8,7 +8,7 @@ fun main() {
     part2(data)
 }
 
-// TODO: try subtraction method
+// TODO: try subtraction method - DONE see day1-method2
 // TODO: try sequences
 private fun part1(data: List<Int>) {
     val combined = data.flatMapIndexed { index, i -> data.drop(index + 1).map { Pair(i, it) } }
